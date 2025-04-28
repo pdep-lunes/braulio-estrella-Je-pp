@@ -38,3 +38,12 @@ pamela = UnPersonaje {
   superActivo = False,
   vida = 9600
 }
+
+bolaEspinosa :: Personaje -> Personaje
+bolaEspinosa enemigo = enemigo { vida = max 0 (vida enemigo - 1000) }
+
+lluviaDeTuercasSanadora :: Personaje -> Personaje
+lluviaDeTuercasSanadora companero = companero { vida = vida companero + 800 }
+
+lluviaDeTuercasDanina :: Personaje -> Personaje
+lluviaDeTuercasDanina enemigo = enemigo { vida = vida enemigo `div` 2 }
