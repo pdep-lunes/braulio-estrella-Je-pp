@@ -20,3 +20,21 @@ data Poder
   | GranadaDeEspinas Int  
   | TorretaCurativa
   deriving Show
+
+espina :: Personaje
+espina = UnPersonaje {
+  nombre = "Espina",
+  poderBasico = BolaEspinosa,
+  superPoder = GranadaDeEspinas 5,
+  superActivo = True,
+  vida = 4800
+}
+
+pamela :: Personaje
+pamela = UnPersonaje {
+  nombre = "Pamela",
+  poderBasico = LluviaDeTuercasSanadora,
+  superPoder = TorretaCurativa,
+  superActivo = False,
+  vida = 9600
+}
